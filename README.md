@@ -9,16 +9,17 @@ Impulse's very own hubot.
 * Check the number of absences: `@imp-bot: "person" absence count"` will retrieve the number of absences. 
 * @jiayan to request heroku access / submit functionality suggestions. 
 * Hubot general functionalities/commands: 
-`
+
+```
 % bin/hubot
 hubot> hubot help
 hubot adapter - Reply with the adapter
-hubot animate me <query> - The same thing as "image me", except adds a few parameters to try to return an animated GIF instead.
+hubot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
 hubot echo <text> - Reply back with <text>
 hubot help - Displays all of the help commands that hubot knows about.
 hubot help <query> - Displays all help commands that match <query>.
 hubot image me <query> - The Original. Queries Google Images for <query> and returns a random top result.
-hubot map me <query> - Returns a map view of the area returned by "query".
+hubot map me <query> - Returns a map view of the area returned by `query`.
 hubot mustache me <query> - Searches Google Images for the specified query and mustaches it.
 hubot mustache me <url> - Adds a mustache to the specified URL.
 hubot ping - Reply with pong
@@ -31,7 +32,7 @@ hubot translate me <phrase> - Searches for a translation for the <phrase> and th
 hubot translate me from <source> into <target> <phrase> - Translates <phrase> from <source> into <target>. Both <source> and <target> are optional
 hubot youtube me <query> - Searches YouTube for the query and returns the video embed link.
 ship it - Display a motivation squirrel
-`
+```
 
 
 ### Running imp-bot Locally
