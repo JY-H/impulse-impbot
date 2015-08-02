@@ -32,4 +32,4 @@ module.exports = (robot) ->
 	robot.respond /(.*) clear absence/i, (res) ->
 		userName = res.match[1]
 		robot.brain.set("#{userName} absence count", 0)
-		robot.send {room: "jiayan"}, "#{username}'s absence count has been reset"
+		robot.messageRoom "jiayan", "#{username}'s absence count has been reset"
