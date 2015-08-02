@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-	
+
 	# Meeting time excitement. 
 	robot.respond /meeting time/i, (res) ->
 		robot.send {room: "general"}, "<!channel> meeting time! \n https://media.giphy.com/media/ajQIVqgZhohNK/giphy.gif"
@@ -26,3 +26,10 @@ module.exports = (robot) ->
 		userName = res.match[1]
 		countData = "#{userName} absence count"
 		res.send "#{userName} absence count: " + (robot.brain.get(countData) || "0")
+
+	# DO NOT CALL, FOR TESTING ONLY. 
+	# IF YOU DO I WILL KNOW.
+	robot.respond /(.*) clear absence/i, (res) ->
+		userName = res.match[1]
+		robot.brain.set("#{userName} absence count", 0)
+		robot.send {room: "jiayan"}, "#{username}'s absence count has been reset"
