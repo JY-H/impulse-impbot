@@ -52,8 +52,8 @@ module.exports = (robot) ->
 
 	# Special Abilities
 	abilities = [
-		"1. @username++ will give awesomeness points to that person!",
-		"2. @imp-bot meeting time will notify everyone in the channel that it's meeting time!",
-		"3. You must speak to JiaYan if you would like to request additional functionalities!"]
+		"1. `@username++` will give awesomeness points to that person!",
+		"2. `@imp-bot meeting time` will notify everyone in the channel that it's meeting time!",
+		"3. You must speak to `JiaYan` if you would like to request additional functionalities!"]
 	robot.hear /abilities/i, (res) ->
 		res.send abilities.join('\n')
