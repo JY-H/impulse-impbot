@@ -7,6 +7,7 @@ Impulse's very own hubot.
 * Announce meeting time: `@imp-bot: meeting time` will trigger an announcement in the general chat. 
 * Record absences: `@imp-bot: "person" is absent` will allow impbot to record the absence. If the number of absences exceeds 5, imp-bot will send a private friendly reminder to that person. 
 * Check the number of absences: `@imp-bot: "person" absence count"` will retrieve the number of absences. 
+* Awesomeness points: `@username++` will give that person awesomeness points!
 * @jiayan to request heroku access / submit functionality suggestions. 
 * Hubot general functionalities/commands: 
 
