@@ -33,10 +33,10 @@ module.exports = (robot) ->
 	# 	robot.brain.set("#{userName} absence count", 0)
 
 	# Awesomeness++
-	robot.hear /(.*)++/i, (res) ->
+	robot.hear /@(.*)\+\+/i, (res) ->
 		userName = res.match[1]
 		countData= "#{userName} awesomeness"
 		robot.brain.set(countData,
 			(robot.brain.get(countData) || 0) + 1
 			)
-		res.send "@#{userName}++ [woot! now at ]" + (robot.brain.get(countData) || "0")
+		res.send "@#{userName}++ [woot! awesomeness points now at " + (robot.brain.get(countData) || "0") + " ]"
