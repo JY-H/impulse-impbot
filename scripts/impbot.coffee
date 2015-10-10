@@ -40,3 +40,20 @@ module.exports = (robot) ->
 			(robot.brain.get(countData) || 0) + 1
 			)
 		res.send "@#{userName}++ [woot! awesomeness points now at " + (robot.brain.get(countData) || "0") + " ]"
+
+	# Rules
+	rules = [
+	  "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.",
+	  "2. A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.",
+	  "3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
+	  ]
+	robot.hear /Laws of Robots/i, (res) ->
+		res.send rules.join('\n')
+
+	# Special Abilities
+	abilities = [
+		"1. @username++ will give awesomeness points to that person!",
+		"2. @imp-bot meeting time will notify everyone in the channel that it's meeting time!",
+		"3. You must speak to JiaYan if you would like to request additional functionalities!"]
+	robot.hear /abilities/i, (res) ->
+		res.send abilities.join('\n')
