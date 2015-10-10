@@ -39,4 +39,4 @@ module.exports = (robot) ->
 		robot.brain.set(countData,
 			(robot.brain.get(countData) || 0) + 1
 			)
-		robot.send "@#{userName}++ [woot! now at ]" + (robot.brain.get(countData) || "0")
+		res.send "@#{userName}++ [woot! now at ]" + (robot.brain.get(countData) || "0")
