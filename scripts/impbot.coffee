@@ -41,6 +41,13 @@ module.exports = (robot) ->
 			)
 		res.send "@#{userName}++ [woot! awesomeness points now at " + (robot.brain.get(countData) || "0") + " ]"
 
+	# Awesomeness--
+	robot.hear /@(.*)\-\-/i, (res) ->
+		userName = res.match[1]
+		countData = "#{userName} awesomeness"
+		robot.brain.set(countData, (robot.brain.get(countData) || 0) - 1)
+		res.send "@#{userName}-- [uh oh... awesomeness points down at " + (robot.brain.get(countData) || "-1") + " ]"
+
 	# Rules
 	rules = [
 	  "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.",
